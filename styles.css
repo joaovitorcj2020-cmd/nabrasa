@@ -1,0 +1,507 @@
+/* ==========================================================
+   STYLES.CSS - COMPLETO (ESPAÇO DA IMAGEM DO CARRINHO REMOVIDO)
+   ========================================================== */
+
+/* PALETA DE CORES DA MARCA */
+:root {
+    --cor-primaria: #FAF0E6; /* Bege/Linho (Fundo da Moldura) */
+    --cor-secundaria: #F9F9F9; /* Off-White (Fundo do Conteúdo) */
+    --cor-texto: #222222; /* Preto (Texto) */
+    --cor-destaque: #D32F2F; /* Vermelho (Chama / Botões Principais) */
+    --cor-desconto: #E65100; /* Laranja (Espetaria / Preço) */
+}
+
+/* Estilos Globais e Reset Básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Container Responsivo */
+.main-container {
+    width: 100%; 
+    max-width: 700px; 
+    margin: 0 auto;
+    background-color: var(--cor-secundaria);
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+}
+
+/* ------------------------------------------- */
+/* CABEÇALHOS (Principal e Secundário) */
+/* ------------------------------------------- */
+
+/* Cabeçalho Principal (index.html) - Centralização da Logo com ícone à direita */
+.header-main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Empurra o carrinho para a direita */
+    position: relative; /* Essencial para centralizar a logo com position: absolute */
+    padding: 20px 20px; 
+    background-color: var(--cor-primaria); 
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo-image {
+    height: 80px; /* Mantém o tamanho grande */
+    width: auto;
+    
+    /* Centralização Perfeita CSS */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Cabeçalho Secundário (Outras Páginas) */
+.header-secondary {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--cor-secundaria);
+    border-bottom: 1px solid #eee; 
+    justify-content: space-between; 
+}
+
+.header-secondary h2 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--cor-texto);
+    margin: 0; 
+}
+
+.back-icon {
+    font-size: 1.5em;
+    color: var(--cor-texto);
+    text-decoration: none;
+    padding: 5px;
+}
+
+/* Ícone do Carrinho (Global) */
+.cart-icon {
+    font-size: 1.8em;
+    color: var(--cor-texto);
+    text-decoration: none;
+    position: relative;
+    padding-right: 10px; 
+}
+
+/* Contador do Carrinho (Bolinha Vermelha) */
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -5px;
+    background-color: var(--cor-destaque);
+    color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    border-radius: 50%; 
+    min-width: 22px; 
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    padding: 0; 
+    display: none; 
+}
+
+/* ------------------------------------------- */
+/* ESTILOS DA TELA INICIAL (index.html) */
+/* ------------------------------------------- */
+.content-grid {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+.nav-card {
+    text-decoration: none;
+    color: var(--cor-texto);
+    border-radius: 50%; 
+    width: 180px; 
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-color: var(--cor-secundaria); 
+    border: 1px solid #eee;
+}
+
+.nav-card h3 {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.card-icon-area {
+    font-size: 2.5em;
+    color: var(--cor-destaque); 
+}
+
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    margin-top: 40px;
+    color: #999;
+    font-size: 0.9em;
+}
+
+/* ------------------------------------------- */
+/* ESTILOS DO CARDÁPIO (cardapio.html) */
+/* ------------------------------------------- */
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 20px;
+    align-items: center;
+}
+
+.menu-item-card {
+    width: 100%;
+    max-width: 300px; 
+    background-color: var(--cor-secundaria);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.item-image-card {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.original-price { 
+    text-decoration: line-through; 
+    color: #999; 
+    font-size: 0.9em; 
+    display: block; 
+}
+.discount-price { 
+    font-size: 1.4em; 
+    font-weight: bold; 
+    color: var(--cor-desconto); 
+    margin-top: 5px; 
+    margin-bottom: 15px; 
+} 
+
+.add-to-cart-btn { 
+    background-color: var(--cor-destaque); 
+    color: white; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    border: none;
+    cursor: pointer;
+    display: inline-block; 
+}
+
+/* ------------------------------------------- */
+/* ESTILOS DE DETALHES (detalhe-*.html) */
+/* ------------------------------------------- */
+.product-detail-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.product-image {
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-info {
+    max-width: 350px;
+    width: 100%;
+}
+
+.product-info h2 {
+    font-size: 2em;
+    color: var(--cor-texto);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.product-info p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center; 
+    min-height: 50px; 
+}
+
+.price-box {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.price-display {
+    text-align: center;
+}
+
+.price-display .discount-price {
+    font-size: 2em;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.qty-btn {
+    background-color: var(--cor-destaque);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.qty-input {
+    width: 40px;
+    text-align: center;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.add-to-cart-big-btn {
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+    background-color: var(--cor-destaque);
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    
+    margin-top: 20px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ------------------------------------------- */
+/* ESTILOS P/ SOBRE NÓS E SORTEIO */
+/* ------------------------------------------- */
+.about-container {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px;
+}
+.about-logo {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.about-text {
+    width: 100%; 
+    max-width: 600px;
+}
+.about-text p {
+    font-size: 1em;
+    color: #666;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.instagram-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.instagram-btn i {
+    font-size: 1.3em;
+}
+
+
+/* ------------------------------------------- */
+/* ESTILOS DO CARRINHO (carrinho.html) */
+/* ------------------------------------------- */
+.cart-list {
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 15px; /* Gap entre os detalhes e o botão de remover */
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+/* * A CLASSE .cart-item-image FOI REMOVIDA DAQUI
+ * PARA ELIMINAR O ESPAÇO DA IMAGEM.
+ */
+
+.item-details-cart {
+    flex-grow: 1;
+}
+.item-details-cart .quantity-control {
+    justify-content: start; 
+    margin-top: 5px;
+}
+.item-details-cart .qty-btn {
+    width: 30px; 
+    height: 30px; 
+    font-size: 1.2em;
+}
+.item-details-cart .qty-input {
+    width: 30px;
+    height: 30px;
+    line-height: 30px; 
+    font-size: 1em;
+}
+
+
+.cart-summary {
+    border-top: 2px solid var(--cor-destaque);
+    padding-top: 20px;
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.finish-order-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    background-color: var(--cor-desconto); 
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.finish-order-btn:disabled {
+    background-color: #ccc !important; 
+    cursor: not-allowed;
+}
+
+.remove-item-btn {
+    background: none;
+    border: none;
+    color: var(--cor-destaque);
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+/* ------------------------------------------- */
+/* RESPONSIVIDADE EM DESKTOP (Layout Ajustado) */
+/* ------------------------------------------- */
+
+@media (min-width: 701px) {
+    body {
+        display: flex;
+        justify-content: center; 
+        align-items: center;    
+        min-height: 100vh;      
+        padding: 30px; 
+    }
+
+    .main-container {
+        min-height: auto; 
+        height: auto;     
+        max-height: none; 
+        overflow-y: visible; 
+        
+        margin: 0;
+        border-radius: 15px; 
+    }
+
+    .content-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 50px 20px; 
+        gap: 20px;
+    }
+    
+    .about-container {
+        flex-direction: row; 
+        align-items: flex-start;
+        justify-content: center;
+        padding: 50px 20px;
+    }
+    .about-logo {
+        max-width: 200px; 
+        flex-shrink: 0; 
+    }
+    .about-text {
+        max-width: 450px; 
+        margin-left: 25px;
+    }
+
+    .menu-content {
+        flex-direction: row; 
+        flex-wrap: wrap;      
+        justify-content: center; 
+        gap: 25px;            
+        padding: 40px 20px;
+    }
+    .menu-item-card {
+        max-width: 200px; 
+    }
+}

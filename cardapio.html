@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Carrinho</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header-secondary" style="justify-content: space-between;">
+            <a href="index.html" class="back-icon"><i class="fas fa-home"></i></a> 
+            <h2 style="flex-grow: 1; text-align: center; margin: 0 10px;">Cardapio</h2>
+             <a href="carrinho.html" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </header>
+
+        <main class="menu-content">
+            <div class="menu-item-card">
+                <div class="item-details">
+                    <p class="item-name">COMBO ESPETO+REFRI</p>
+                    <img src="./fotos/combo.jpg" alt="Combo Espeto e Refri" class="item-image-card"> 
+                    <p class="original-price">R$29,00</p>
+                    <p class="discount-price">R$19,99</p>
+                    <a href="detalhe-combo.html" class="add-to-cart-btn">Ver Detalhes</a>
+                </div>
+            </div>
+
+            <div class="menu-item-card">
+                <div class="item-details">
+                    <p class="item-name">Espeto</p>
+                    <img src="./fotos/espeto.jpg" alt="Imagem de Espetos" class="item-image-card"> 
+                    <p class="original-price" style="display: none;"></p>
+                    <p class="discount-price">R$12,99</p>
+                    <a href="detalhe-espeto.html" class="add-to-cart-btn">Ver Detalhes</a>
+                </div>
+            </div>
+
+            <div class="menu-item-card">
+                <div class="item-details">
+                    <p class="item-name">Copo de refri</p>
+                    <img src="./fotos/refri.jpg" alt="Copo de Refrigerante" class="item-image-card"> 
+                    <p class="original-price" style="display: none;"></p>
+                    <p class="discount-price">R$3,00</p>
+                    <a href="detalhe-refri.html" class="add-to-cart-btn">Ver Detalhes</a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Na Brasa - Seu Carrinho</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="page-carrinho"> <div class="main-container">
+        
+        <header class="header-secondary">
+            <a href="cardapio.html" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+            <h2 style="flex-grow: 1; text-align: center; margin: 0;">Seu Carrinho</h2>
+            <div style="width: 38px;"></div> </header>
+
+        <main class="cart-list">
+            
+            <div id="carrinho-vazio-container" style="display: none; text-align: center; padding: 40px;">
+                <p style="color: #666; font-size: 1.1em;">Seu carrinho está vazio.</p>
+            </div>
+            
+            <div id="itens-do-carrinho">
+                </div>
+
+            <div class="cart-summary">
+                <p>Total do Pedido: <span class="discount-price" id="cart-total">R$ 0,00</span></p>
+            </div>
+
+            <button class="finish-order-btn" id="finalizar-pedido-btn" onclick="finalizarPedido()">
+                Finalizar Pedido
+            </button>
+        
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
